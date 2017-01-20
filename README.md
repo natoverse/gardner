@@ -9,7 +9,7 @@ Many of these puzzles have very elegant mathematical solutions, but a brute forc
 
 I'm working from [The Colossal Book of Short Puzzles and Problems](https://www.amazon.com/Colossal-Book-Short-Puzzles-Problems/dp/0393061140/ref=sr_1_2?ie=UTF8&qid=1484882213&sr=8-2&keywords=gardner+puzzles); I've numbered them to match so they are easy look up.
 
-I have no idea how many of these I'll work on, probably until I get bored. Feel free to submit new solutions with a PR. Or just take the code and do whatever you want with it.
+I have no idea how many of these I'll work on, probably until I get bored or they get too complicated to be fun with this approach. Feel free to submit new solutions with a PR. Or just take the code and do whatever you want with it.
 
 ## Getting started
 
@@ -17,7 +17,5 @@ Since these are "proofs", it seemed appropriate to structure the project around 
 
 You need a newer version of [Node.js](https://nodejs.org/en/) that supports ES6 syntax.
 
-`npm install` to get dependencies
-`gulp` anytime you want to run the tests
-
-You could also use a mocha cli if you just wanted to run one at a time.
+- `npm install` to get dependencies
+- `gulp` anytime you want to run the tests
