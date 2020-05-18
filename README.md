@@ -13,9 +13,9 @@ I have no idea how many of these I'll work on, probably until I get bored or the
 
 ## Getting started
 
-Since these are "proofs", it seemed appropriate to structure the project around assertions. Therefore, I've baked the test cases and solutions into the same file. They use [Mocha](https://mochajs.org/) + [Chai](http://chaijs.com/), with the outer `describe` containing a short description of the problem, and the inner `it` containing a description of the solution (one or more, depending how many solutions I wanted to illustrate for the problem).
+Since these are "proofs", it seemed appropriate to structure the project around assertions. Therefore, I've baked the test cases and solutions into the same file. They use [Jest](https://jestjs.io/), with a short description of the problem and `test` blocks containing a description + proof of the solution (one or more, depending how many solutions I wanted to illustrate for the problem).
 
 You need a newer version of [Node.js](https://nodejs.org/en/) that supports ES6 syntax.
 
-- `npm install` to get dependencies
-- `gulp` anytime you want to run the tests
+- `yarn` to get dependencies
+- `yarn test` anytime you want to run the tests, or `yarn start` to start a watcher that runs them every time the code changes.
