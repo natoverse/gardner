@@ -1,6 +1,3 @@
-/**
- *
- */
 describe(`
 Create a row with 10 columns, numbered 0 through 9.
 Inscribe a 10-digit number such that the digit in the "0" cell indicates
@@ -13,7 +10,7 @@ total number of nines in the number. The answer is unique.
 		// then convert that full-length number to an array of numbers
 		const str = `${number}`.padStart(length, '0')
 		const chars = str.split('')
-		const numbers = chars.map(c => +c)
+		const numbers = chars.map((c) => +c)
 		// count 'em up
 		const counts = new Array(length).fill(0)
 		for (let j = 0; j < length; j++) {

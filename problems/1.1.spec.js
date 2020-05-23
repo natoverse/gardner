@@ -16,8 +16,11 @@ describe('How many ambiguous days are there in a year comparing mm/dd/yyyy versu
 		}, {})
 
 		// match up all the US-formatted dates with a Euro date, but don't include ones where day and month are the same
-		const ambiguous = base.filter(date => {
-			return date.getMonth() + 1 !== date.getDate() && euro[`${date.getMonth() + 1}-${date.getDate()}`]
+		const ambiguous = base.filter((date) => {
+			return (
+				date.getMonth() + 1 !== date.getDate() &&
+				euro[`${date.getMonth() + 1}-${date.getDate()}`]
+			)
 		})
 
 		expect(ambiguous.length).toEqual(132)
