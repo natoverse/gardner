@@ -18,9 +18,6 @@ running from top to bottom? (monospace font of course)
 		while (currentRow < rowCount) {
 			let row = ''
 			while (true) {
-				if (currentWord === words.length) {
-					currentWord = 0
-				}
 				const word = words[currentWord]
 				const remaining = width - row.length
 				if (remaining >= word.length) {
@@ -35,6 +32,9 @@ running from top to bottom? (monospace font of course)
 					break
 				}
 				currentWord++
+				if (currentWord === words.length) {
+					currentWord = 0
+				}
 			}
 		}
 
@@ -60,6 +60,10 @@ running from top to bottom? (monospace font of course)
 			rowCount
 		)
 		console.log(rows.slice(0, 10))
+		// verify structure is correct
+		expect(rows.length).toBe(rowCount)
+		expect(rows.every((r) => r.length === width)).toBe(true)
+		// verify at least one blank column
 		const verified = verify(rows, width)
 		expect(verified).toBe(true)
 	})
